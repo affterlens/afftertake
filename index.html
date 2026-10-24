@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afftertake | Cinematic Visuals</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#171717',
+                        forest: '#06110C',
+                        cream: '#F4EFEA',
+                        muted: '#9c9c9c',
+                    },
+                    fontFamily: {
+                        playfair: ['"Playfair Display"', 'serif'],
+                        outfit: ['"Outfit"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #171717;
+            color: #F4EFEA;
+        }
+
+        /* Image hover effect */
+        .image-container img {
+            transition: transform 0.7s ease;
+        }
+        .image-container:hover img {
+            transform: scale(1.03);
+        }
+
+        /* Smooth reveal animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="font-outfit antialiased overflow-x-hidden selection:bg-cream selection:text-charcoal">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-charcoal/95 backdrop-blur-md border-b border-white/5 transition-all py-4 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            
+            <!-- Circular Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="image.png" alt="Afftertake Logo" class="w-12 h-12 rounded-full object-cover border border-white/10 shadow-lg group-hover:border-cream/50 transition-colors">
+                <span class="font-playfair text-xl tracking-wide hidden md:block">Afftertake</span>
+            </a>
+
+            <!-- Links -->
+            <div class="flex items-center gap-6 md:gap-10 text-sm uppercase tracking-widest font-medium">
+                <a href="#about" class="hidden md:block hover:text-cream/70 transition-colors">Creator</a>
+                <a href="#work" class="hidden md:block hover:text-cream/70 transition-colors">Portfolio</a>
+                <a href="https://www.instagram.com/afftertake" target="_blank" class="hover:text-cream/70 transition-colors flex items-center gap-2">
+                    <i class="fab fa-instagram text-lg"></i> <span class="hidden sm:block">Instagram</span>
+                </a>
+                
+                <!-- Clean WhatsApp Button -->
+                <a href="https://wa.me/919699617990" target="_blank" class="border border-cream text-cream px-5 py-2.5 rounded-sm hover:bg-cream hover:text-charcoal transition-all duration-300 flex items-center gap-2">
+                    <i class="fab fa-whatsapp text-lg"></i> <span>Book</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[85vh] flex items-center justify-center pt-24 px-6 bg-gradient-to-b from-forest to-charcoal">
+        <div class="max-w-4xl mx-auto text-center z-10 animate-fade-in">
+            <h1 class="font-playfair text-5xl md:text-7xl lg:text-8xl leading-tight mb-6">
+                The Art of <br> <span class="italic text-cream/80">Cinematography.</span>
+            </h1>
+            <p class="text-muted text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto leading-relaxed">
+                Premium visual storytelling, professionally color-graded and flawlessly stabilized. Elevating brands and capturing milestones with unparalleled precision.
+            </p>
+        </div>
+    </section>
+
+    <!-- About the Creator / Admin (Features image_10.png) -->
+    <section id="about" class="py-24 px-6 border-t border-white/5">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <!-- Text Content -->
+            <div class="order-2 lg:order-1">
+                <h2 class="font-playfair text-4xl md:text-5xl mb-6">The Creator <br><span class="italic text-muted">Behind the Lens</span></h2>
+                <div class="space-y-6 text-cream/90 font-light text-lg leading-relaxed">
+                    <p>
+                        Welcome to Afftertake. I am the visual artist and admin behind this platform, based out of Jalgaon, Maharashtra. My journey in visual media started with a passion for capturing raw emotions and dynamic moments. 
+                    </p>
+                    <p>
+                        While smartphone cameras offer convenience, I realized that true cinematic excellence requires dedicated, professional gear. That is why I transitioned exclusively to the <strong>DJI Osmo Pocket 3</strong>. 
+                    </p>
+                    <div class="pl-6 border-l-2 border-cream/20 py-2">
+                        <p class="text-base text-muted">
+                            The upgrade to a 1-inch sensor shooting in 10-bit D-Log M completely transformed my workflow. It allows me to extract maximum dynamic range and apply rich, high-end color grading that smartphones simply cannot replicate. Combined with a mechanical 3-axis gimbal, the stabilization is buttery smooth, ensuring every frame feels like a scene from a movie.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Admin Image -->
+            <div class="order-1 lg:order-2 relative image-container overflow-hidden rounded-sm shadow-2xl aspect-[4/5] bg-forest border border-white/5">
+                <img src="image_10.png" alt="Afftertake Creator on Bike" class="w-full h-full object-cover">
+                <!-- DJI Watermark -->
+                <div class="absolute bottom-4 right-4 bg-black/60 backdrop-blur-md border border-white/10 text-cream text-[10px] uppercase tracking-widest px-3 py-1.5 rounded-sm flex items-center gap-2 z-20 pointer-events-none shadow-lg">
+                    <i class="fas fa-camera"></i> Click by DJI Osmo
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Automotive & Car Deliveries (Features image_5.png) -->
+    <section class="py-24 px-6 bg-forest/30 border-y border-white/5">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <!-- Car Image -->
+            <div class="relative image-container overflow-hidden rounded-sm shadow-2xl bg-charcoal border border-white/5">
+                <img src="image_5.png" alt="Automotive Car Delivery Shoot" class="w-full h-auto object-cover">
+                <!-- DJI Watermark -->
+                <div class="absolute bottom-4 right-4 bg-black/60 backdrop-blur-md border border-white/10 text-cream text-[10px] uppercase tracking-widest px-3 py-1.5 rounded-sm flex items-center gap-2 z-20 pointer-events-none shadow-lg">
+                    <i class="fas fa-camera"></i> Click by DJI Osmo
+                </div>
+            </div>
+
+            <!-- Text Content -->
+            <div>
+                <h2 class="font-playfair text-4xl md:text-5xl mb-6">Automotive & <br><span class="italic text-muted">Car Deliveries</span></h2>
+                <p class="text-cream/90 font-light text-lg leading-relaxed mb-6">
+                    Taking delivery of a new vehicle is a monumental occasion that deserves to be documented in style. 
+                </p>
+                <p class="text-muted font-light leading-relaxed mb-8">
+                    The DJI Osmo's mechanical gimbal is a game-changer for automotive cinematography. It enables me to execute perfectly smooth tracking shots, sweeping curves around the vehicle's bodylines, and dramatic reveal angles without a single jitter. The result is a high-end, commercial-style video that makes your new car look its absolute best.
+                </p>
+                <a href="https://wa.me/919699617990" target="_blank" class="inline-flex items-center gap-3 bg-cream text-charcoal px-8 py-3.5 text-sm uppercase tracking-[0.15em] font-semibold hover:bg-transparent hover:text-cream hover:border-cream border border-transparent transition-all duration-300 rounded-sm">
+                    Book a Car Shoot <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery Section (Features remaining images) -->
+    <section id="work" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-4xl md:text-5xl mb-4">Selected Portfolio</h2>
+                <p class="text-muted font-light tracking-wide">A showcase of portraits, lifestyle, and brand aesthetics.</p>
+            </div>
+
+            <!-- Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Image 3: BTS / Shooting -->
+                <div class="relative image-container overflow-hidden rounded-sm bg-forest border border-white/5 aspect-[4/5]">
+                    <img src="image_3.png" alt="Behind the Scenes Shoot" class="w-full h-full object-cover">
+                    <div class="absolute bottom-3 right-3 bg-black/70 backdrop-blur-md border border-white/10 text-cream text-[10px] uppercase tracking-widest px-3 py-1.5 rounded-sm flex items-center gap-2 z-20 pointer-events-none">
+                        <i class="fas fa-camera"></i> Click by DJI Osmo
+                    </div>
+                </div>
+
+                <!-- Image 4: Makeup / Beauty Collage -->
+                <div class="relative image-container overflow-hidden rounded-sm bg-forest border border-white/5 aspect-[4/5]">
+                    <img src="image_4.png" alt="Makeup and Beauty Portfolio" class="w-full h-full object-cover">
+                    <div class="absolute bottom-3 right-3 bg-black/70 backdrop-blur-md border border-white/10 text-cream text-[10px] uppercase tracking-widest px-3 py-1.5 rounded-sm flex items-center gap-2 z-20 pointer-events-none">
+                        <i class="fas fa-camera"></i> Click by DJI Osmo
+                    </div>
+                </div>
+
+                <!-- Image 6: Pre Wedding B&W -->
+                <div class="relative image-container overflow-hidden rounded-sm bg-forest border border-white/5 aspect-[4/5]">
+                    <img src="image_6.png" alt="Pre Wedding Couple Shoot" class="w-full h-full object-cover">
+                    <div class="absolute bottom-3 right-3 bg-black/70 backdrop-blur-md border border-white/10 text-cream text-[10px] uppercase tracking-widest px-3 py-1.5 rounded-sm flex items-center gap-2 z-20 pointer-events-none">
+                        <i class="fas fa-camera"></i> Click by DJI Osmo
+                    </div>
+                </div>
+
+                <!-- Image 7: Portrait -->
+                <div class="relative image-container overflow-hidden rounded-sm bg-forest border border-white/5 aspect-[4/5]">
+                    <img src="image_7.png" alt="Outdoor Beauty Portrait" class="w-full h-full object-cover">
+                    <div class="absolute bottom-3 right-3 bg-black/70 backdrop-blur-md border border-white/10 text-cream text-[10px] uppercase tracking-widest px-3 py-1.5 rounded-sm flex items-center gap-2 z-20 pointer-events-none">
+                        <i class="fas fa-camera"></i> Click by DJI Osmo
+                    </div>
+                </div>
+
+                <!-- Image 8: Fashion -->
+                <div class="relative image-container overflow-hidden rounded-sm bg-forest border border-white/5 aspect-[4/5]">
+                    <img src="image_8.png" alt="Fashion Street Style" class="w-full h-full object-cover">
+                    <div class="absolute bottom-3 right-3 bg-black/70 backdrop-blur-md border border-white/10 text-cream text-[10px] uppercase tracking-widest px-3 py-1.5 rounded-sm flex items-center gap-2 z-20 pointer-events-none">
+                        <i class="fas fa-camera"></i> Click by DJI Osmo
+                    </div>
+                </div>
+
+                <!-- Image 9: Lifestyle Saree -->
+                <div class="relative image-container overflow-hidden rounded-sm bg-forest border border-white/5 aspect-[4/5]">
+                    <img src="image_9.png" alt="Traditional Lifestyle Portrait" class="w-full h-full object-cover">
+                    <div class="absolute bottom-3 right-3 bg-black/70 backdrop-blur-md border border-white/10 text-cream text-[10px] uppercase tracking-widest px-3 py-1.5 rounded-sm flex items-center gap-2 z-20 pointer-events-none">
+                        <i class="fas fa-camera"></i> Click by DJI Osmo
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-forest pt-20 pb-10 px-6 border-t border-white/5 text-center">
+        <div class="max-w-4xl mx-auto flex flex-col items-center">
+            
+            <!-- Footer Logo -->
+            <img src="image.png" alt="Afftertake Logo" class="w-16 h-16 rounded-full object-cover border border-white/10 mb-8 shadow-lg">
+            
+            <h2 class="font-playfair text-3xl md:text-4xl mb-8">Ready to elevate your visuals?</h2>
+            
+            <!-- Prominent WhatsApp CTA -->
+            <a href="https://wa.me/919699617990" target="_blank" class="inline-flex items-center gap-3 bg-cream text-charcoal px-10 py-4 text-sm uppercase tracking-[0.2em] font-semibold hover:bg-transparent hover:text-cream hover:border-cream border border-transparent transition-all duration-300 rounded-sm mb-16 shadow-[0_0_20px_rgba(244,239,234,0.1)]">
+                <i class="fab fa-whatsapp text-xl"></i> Message on WhatsApp
+            </a>
+
+            <div class="w-full border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs uppercase tracking-widest text-muted">
+                <p>&copy; 2026 Afftertake Studio.</p>
+                <div class="flex gap-6">
+                    <a href="https://www.instagram.com/afftertake" class="hover:text-cream transition-colors"><i class="fab fa-instagram text-lg"></i></a>
+                    <a href="https://wa.me/919699617990" class="hover:text-cream transition-colors"><i class="fab fa-whatsapp text-lg"></i></a>
+                </div>
+                <p>Jalgaon, Maharashtra.</p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
