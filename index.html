@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afftertake | Professional DJI Osmo Visuals</title>
+    
+    <!-- Cinematic Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- COLOR PALETTE (Based on your theme) --- */
+        :root {
+            --bg-main: #171717; /* Charcoal Black */
+            --bg-card: #06110C; /* Forest Green */
+            --accent: #A31C1B; /* Crimson Red */
+            --text-main: #F4EFEA; /* Cream */
+            --text-muted: #a0a0a0;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Outfit', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            font-weight: 400;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(23, 23, 23, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* Circular Logo */
+        .circle-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--text-main);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .circle-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Highlighted Instagram Button */
+        .ig-highlight {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white !important;
+            padding: 8px 18px;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 15px rgba(220, 39, 67, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .ig-highlight:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(220, 39, 67, 0.6);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            padding: 150px 5% 80px;
+            text-align: center;
+            background: radial-gradient(circle at top, var(--bg-card) 0%, var(--bg-main) 80%);
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        /* WhatsApp Booking Button */
+        .btn-wa {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 40px;
+            background: #25D366; /* WhatsApp Green */
+            color: #fff;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .btn-wa:hover {
+            background: #1ebe57;
+            transform: scale(1.05);
+        }
+
+        /* --- TWO-COLUMN SECTIONS (Gear & Car Deliveries) --- */
+        .split-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            padding: 80px 5%;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .split-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .split-text h2 span {
+            color: var(--accent); /* Crimson highlight */
+        }
+
+        .split-text p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .image-wrapper {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* --- DJI OSMO WATERMARK --- */
+        .dji-watermark {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            color: var(--text-main);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            font-family: var(--font-body);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(244, 239, 234, 0.2);
+            z-index: 10;
+            pointer-events: none;
+            letter-spacing: 0.5px;
+        }
+
+        .dji-watermark i {
+            color: var(--accent); /* Make the camera icon pop */
+        }
+
+        /* --- PORTFOLIO GRID --- */
+        .portfolio {
+            padding: 80px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .portfolio-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 50px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .grid-item:hover img {
+            transform: scale(1.03);
+        }
+
+        /* --- ADMIN/CREATOR SECTION --- */
+        .creator-section {
+            background: var(--bg-card);
+            padding: 80px 5%;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .creator-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            border: 3px solid var(--accent);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 60px 5%;
+            text-align: center;
+            background: var(--bg-main);
+        }
+
+        footer p {
+            color: var(--text-muted);
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .split-section {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 50px 5%;
+            }
+            .hero { padding: 120px 20px 60px; }
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links span { display: none; } /* Hide text, keep icon on mobile if needed */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#">
+            <img src="image.png" alt="Afftertake Logo" class="circle-logo">
+        </a>
+        <div class="nav-links">
+            <a href="#work" style="font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">Portfolio</a>
+            <a href="https://www.instagram.com/afftertake" target="_blank" class="ig-highlight">
+                <i class="fab fa-instagram"></i> <span>@afftertake</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Cinematic Precision.</h1>
+        <p>Elevating brand content, pre-wedding shoots, and automotive visuals using cutting-edge gimbal stabilization and 10-bit D-Log color grading.</p>
+        <a href="https://wa.me/919699617990" class="btn-wa">
+            <i class="fab fa-whatsapp"></i> Book a Shoot
+        </a>
+    </section>
+
+    <!-- The Gear & Process (Image 3) -->
+    <section class="split-section">
+        <div class="split-text">
+            <h2>Upgraded to <span>DJI Osmo Pocket 3</span></h2>
+            <p>Standard iPhone video simply can't match the dynamic range and buttery-smooth movement of dedicated mechanical stabilization. That's why every project is now shot exclusively on the DJI Osmo Pocket 3.</p>
+            <p>Featuring a 1-inch sensor and professional D-Log M color profiles, I capture raw, cinema-grade footage on location, allowing for advanced, moody color grading that perfectly matches the deep, premium aesthetic of your brand or special event.</p>
+        </div>
+        <div class="image-wrapper">
+            <img src="image_3.png" alt="Admin shooting on location">
+            <div class="dji-watermark"><i class="fas fa-video"></i> Click by DJI Osmo</div>
+        </div>
+    </section>
+
+    <!-- Car Deliveries Special (Image 5) -->
+    <section class="split-section" style="background: var(--bg-card); border-radius: 20px;">
+        <div class="image-wrapper">
+            <img src="image_5.png" alt="Toyota Car Delivery Shoot">
+            <div class="dji-watermark"><i class="fas fa-video"></i> Click by DJI Osmo</div>
+        </div>
+        <div class="split-text" style="padding-left: 20px;">
+            <h2>Automotive & <span>Car Deliveries</span></h2>
+            <p>New car deliveries are a massive milestone. The DJI Osmo's built-in 3-axis mechanical gimbal is the absolute perfect tool for automotive cinematography.</p>
+            <p>It allows for flawless, cinematic tracking shots as the cover is pulled back, capturing the gloss of the paint and the emotion of the moment without a single jitter or shake. Your vehicle reveal will look like a high-end commercial.</p>
+            <a href="https://wa.me/919699617990" class="btn-wa" style="margin-top: 15px; padding: 12px 25px; font-size: 0.9rem;">
+                <i class="fab fa-whatsapp"></i> Book Car Delivery Shoot
+            </a>
+        </div>
+    </section>
+
+    <!-- Full Portfolio Gallery -->
+    <section id="work" class="portfolio">
+        <h2 class="portfolio-title">Selected Work</h2>
+        <div class="grid">
+            
+            <!-- Makeup & Beauty -->
+            <div class="grid-item">
+                <img src="image_4.png" alt="Makeup Portfolio">
+                <div class="dji-watermark"><i class="fas fa-camera"></i> Click by DJI Osmo</div>
+            </div>
+            
+            <!-- Fashion / Full Frame -->
+            <div class="grid-item" style="grid-row: span 2;">
+                <img src="image_8.png" alt="Fashion Photography">
+                <div class="dji-watermark"><i class="fas fa-camera"></i> Click by DJI Osmo</div>
+            </div>
+
+            <!-- Portraits -->
+            <div class="grid-item">
+                <img src="image_7.png" alt="Outdoor Portrait">
+                <div class="dji-watermark"><i class="fas fa-camera"></i> Click by DJI Osmo</div>
+            </div>
+
+            <!-- Saree / Cultural -->
+            <div class="grid-item">
+                <img src="image_9.png" alt="Traditional Lifestyle Shoot">
+                <div class="dji-watermark"><i class="fas fa-camera"></i> Click by DJI Osmo</div>
+            </div>
+
+            <!-- Pre Wedding / Couple -->
+            <div class="grid-item" style="grid-column: 1 / -1; height: 500px;">
+                <img src="image_6.png" alt="Pre-Wedding Shoot">
+                <div class="dji-watermark"><i class="fas fa-camera"></i> Shot on DJI Osmo</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin / Creator Bio (Image 10) -->
+    <section class="creator-section">
+        <img src="image_10.png" alt="Afftertake Creator" class="creator-img">
+        <h2 style="margin-bottom: 10px;">The Creator Behind the Lens</h2>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 30px;">
+            I am the admin and visual artist behind Afftertake. Based in Jalgaon, Maharashtra, my goal is to blend raw emotion with technical precision. Whether I'm on a bike hunting for the perfect scenic location or meticulously color-grading footage in post-production, I ensure every single frame is a masterpiece.
+        </p>
+        <a href="https://www.instagram.com/afftertake" target="_blank" class="ig-highlight" style="display: inline-flex; margin: 0 auto;">
+            <i class="fab fa-instagram"></i> Follow My Journey
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <img src="image.png" alt="Afftertake Logo" class="circle-logo" style="width: 60px; height: 60px; margin-bottom: 20px;">
+        <h2>Ready to create something viral?</h2>
+        <br>
+        <a href="https://wa.me/919699617990" class="btn-wa">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+        <p>&copy; 2026 Afftertake. Professional DJI Osmo Visuals | Jalgaon, Maharashtra.</p>
+    </footer>
+
+</body>
+</html>
