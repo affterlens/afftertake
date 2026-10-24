@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afftertake | Cinematic Visuals Shot on DJI Osmo</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#171717',
+                        forest: '#06110C',
+                        crimson: '#A31C18',
+                        cream: '#F4EFEA',
+                        muted: '#9c9c9c',
+                    },
+                    fontFamily: {
+                        playfair: ['"Playfair Display"', 'serif'],
+                        outfit: ['"Outfit"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #171717;
+            color: #F4EFEA;
+        }
+        
+        /* Custom styling for the DJI Badge Overlay */
+        .dji-badge {
+            background: rgba(15, 15, 15, 0.75);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(244, 239, 234, 0.15);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        
+        .image-card:hover img {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body class="font-outfit antialiased selection:bg-crimson selection:text-cream overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-charcoal/90 backdrop-blur-md border-b border-white/5 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="block w-32 md:w-40">
+                <img src="image.png" alt="Afftertake Logo" class="w-full h-auto object-contain">
+            </a>
+            <div class="hidden md:flex gap-8 items-center text-sm uppercase tracking-widest">
+                <a href="#about" class="hover:text-crimson transition-colors">The Gear</a>
+                <a href="#portfolio" class="hover:text-crimson transition-colors">Work</a>
+                <a href="https://wa.me/919699617990" target="_blank" class="border border-cream/30 px-5 py-2 hover:bg-cream hover:text-charcoal transition-all rounded-sm">Book Now</a>
+            </div>
+            <!-- Mobile Book Button -->
+            <div class="md:hidden">
+                <a href="https://wa.me/919699617990" target="_blank" class="text-xs border border-cream/30 px-3 py-1.5 hover:bg-cream hover:text-charcoal transition-all rounded-sm uppercase tracking-wider">Book</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 px-6">
+        <div class="absolute inset-0 bg-gradient-to-br from-charcoal via-charcoal to-forest opacity-80 -z-10"></div>
+        <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-crimson/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+        
+        <div class="max-w-4xl mx-auto text-center z-10">
+            <h1 class="font-playfair text-5xl md:text-7xl lg:text-8xl leading-tight mb-6 tracking-tight">
+                Cinematic <br> <span class="italic text-cream/90">Storytelling.</span>
+            </h1>
+            <p class="text-muted text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto">
+                Premium visual content crafted for virality. Masterfully stabilized, professionally color-graded, and built to elevate your brand.
+            </p>
+            <a href="https://wa.me/919699617990" target="_blank" class="inline-flex items-center gap-3 bg-cream text-charcoal px-8 py-4 text-sm uppercase tracking-[0.2em] font-semibold hover:bg-crimson hover:text-cream transition-all duration-300 shadow-lg shadow-cream/10">
+                <i class="fab fa-whatsapp text-lg"></i> Book via WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- About & Gear Section -->
+    <section id="about" class="py-24 px-6 border-t border-white/5 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- Admin Image -->
+                <div class="relative group image-card overflow-hidden rounded-sm shadow-2xl">
+                    <img src="image_3.png" alt="Behind the Scenes - Admin Shooting" class="w-full h-full object-cover transition-transform duration-700 grayscale hover:grayscale-0">
+                    <!-- DJI Badge -->
+                    <div class="absolute bottom-4 left-4 dji-badge px-3 py-2 flex items-center gap-2 rounded-sm text-xs font-outfit uppercase tracking-widest text-cream z-20">
+                        <i class="fas fa-video text-crimson"></i> Click by DJI Osmo
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div>
+                    <h2 class="font-playfair text-4xl md:text-5xl mb-6 leading-tight">The Art of the <br><span class="italic text-muted">Perfect Take.</span></h2>
+                    <p class="text-cream/80 text-lg mb-6 font-light leading-relaxed">
+                        Welcome to <strong>Afftertake</strong>. I am the creator and admin behind the lens, based in Jalgaon, Maharashtra. My focus is entirely on crafting high-end, dynamic visual content that demands attention and stops the scroll.
+                    </p>
+                    <div class="p-6 bg-white/5 border border-white/10 rounded-sm">
+                        <h3 class="text-xl font-playfair mb-3 text-cream flex items-center gap-3">
+                            <i class="fas fa-camera-retro text-crimson"></i> The Gear Upgrade
+                        </h3>
+                        <p class="text-sm text-muted leading-relaxed font-light">
+                            Standard smartphone footage limits creative potential. I shoot exclusively utilizing the <strong>DJI Osmo Pocket 3</strong>. With its built-in mechanical gimbal ensuring buttery-smooth tracking and a 1-inch sensor recording in <strong>10-bit D-Log M</strong>, I deliver cinema-grade dynamic range. This enables advanced, professional color grading tailored specifically to your aesthetic.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Portfolio Section -->
+    <section id="portfolio" class="py-24 px-6 bg-black/30 border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-4xl md:text-5xl mb-4">Selected Work</h2>
+                <p class="text-muted text-lg font-light tracking-wide">Professionally Graded. Flawlessly Stabilized.</p>
+            </div>
+
+            <div class="space-y-24">
+                
+                <!-- Category 1: Pre-Wedding & Lifestyle -->
+                <div>
+                    <div class="flex items-center gap-4 mb-8">
+                        <h3 class="font-playfair text-2xl md:text-3xl">Pre-Wedding & Lifestyle</h3>
+                        <div class="h-px bg-white/10 flex-grow"></div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="relative group image-card overflow-hidden rounded-sm aspect-[4/5] bg-charcoal">
+                            <img src="image_6.png" alt="Pre-Wedding B&W" class="w-full h-full object-cover transition-transform duration-700">
+                            <div class="absolute bottom-4 right-4 dji-badge px-3 py-2 flex items-center gap-2 rounded-sm text-[10px] font-outfit uppercase tracking-widest text-cream z-20">
+                                <i class="fas fa-camera text-crimson"></i> Shot on DJI Osmo
+                            </div>
+                        </div>
+                        <div class="relative group image-card overflow-hidden rounded-sm aspect-[4/5] bg-charcoal">
+                            <img src="image_9.png" alt="Lifestyle Saree" class="w-full h-full object-cover transition-transform duration-700">
+                            <div class="absolute bottom-4 right-4 dji-badge px-3 py-2 flex items-center gap-2 rounded-sm text-[10px] font-outfit uppercase tracking-widest text-cream z-20">
+                                <i class="fas fa-camera text-crimson"></i> Shot on DJI Osmo
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Automotive / Car Deliveries -->
+                <div>
+                    <div class="flex items-center gap-4 mb-8">
+                        <h3 class="font-playfair text-2xl md:text-3xl">Automotive & Car Deliveries</h3>
+                        <div class="h-px bg-white/10 flex-grow"></div>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 items-center">
+                        <div class="lg:col-span-3 relative group image-card overflow-hidden rounded-sm shadow-xl">
+                            <img src="image_5.png" alt="Toyota Car Delivery" class="w-full h-auto object-cover transition-transform duration-700">
+                            <div class="absolute bottom-4 right-4 dji-badge px-3 py-2 flex items-center gap-2 rounded-sm text-[10px] font-outfit uppercase tracking-widest text-cream z-20">
+                                <i class="fas fa-car text-crimson"></i> Click by DJI Osmo
+                            </div>
+                        </div>
+                        <div class="lg:col-span-2 p-6 lg:p-8">
+                            <h4 class="font-playfair text-xl text-cream mb-4">Dynamic Reveals</h4>
+                            <p class="text-muted font-light leading-relaxed mb-6">
+                                The mechanical gimbal of the Osmo Pocket 3 is a game-changer for automotive cinematography. It ensures buttery-smooth panning and tracking shots around vehicles, capturing every curve, reflection, and emotion flawlessly during momentous car deliveries.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 3: Makeup & Beauty Reels -->
+                <div>
+                    <div class="flex items-center gap-4 mb-8">
+                        <h3 class="font-playfair text-2xl md:text-3xl">Makeup & Beauty Portraits</h3>
+                        <div class="h-px bg-white/10 flex-grow"></div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="relative group image-card overflow-hidden rounded-sm bg-charcoal">
+                            <img src="image_4.png" alt="Makeup Collage" class="w-full h-auto object-cover transition-transform duration-700">
+                            <div class="absolute bottom-4 left-4 dji-badge px-3 py-2 flex items-center gap-2 rounded-sm text-[10px] font-outfit uppercase tracking-widest text-cream z-20">
+                                <i class="fas fa-star text-crimson"></i> Shot on DJI Osmo
+                            </div>
+                        </div>
+                        <div class="relative group image-card overflow-hidden rounded-sm bg-charcoal aspect-[4/5] md:aspect-auto">
+                            <img src="image_7.png" alt="Beauty Portrait" class="w-full h-full object-cover transition-transform duration-700">
+                            <div class="absolute bottom-4 left-4 dji-badge px-3 py-2 flex items-center gap-2 rounded-sm text-[10px] font-outfit uppercase tracking-widest text-cream z-20">
+                                <i class="fas fa-star text-crimson"></i> Shot on DJI Osmo
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 4: Fashion & Model Portfolios -->
+                <div>
+                    <div class="flex items-center gap-4 mb-8">
+                        <h3 class="font-playfair text-2xl md:text-3xl">Fashion & Portfolios</h3>
+                        <div class="h-px bg-white/10 flex-grow"></div>
+                    </div>
+                    <div class="relative group image-card overflow-hidden rounded-sm w-full md:w-2/3 mx-auto shadow-xl">
+                        <img src="image_8.png" alt="Fashion Street Style" class="w-full h-auto object-cover transition-transform duration-700">
+                        <div class="absolute bottom-4 right-4 dji-badge px-3 py-2 flex items-center gap-2 rounded-sm text-[10px] font-outfit uppercase tracking-widest text-cream z-20">
+                            <i class="fas fa-camera text-crimson"></i> Click by DJI Osmo
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Final CTA -->
+    <footer class="bg-forest/20 pt-24 pb-12 px-6 border-t border-white/5 relative overflow-hidden">
+        <!-- Background accent -->
+        <div class="absolute bottom-0 right-0 w-1/2 h-full bg-gradient-to-tl from-forest/40 to-transparent -z-10"></div>
+        
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-16">
+            
+            <!-- Let's Work Together -->
+            <div>
+                <h2 class="font-playfair text-5xl md:text-6xl mb-6">Let's Create<br>Something<br><span class="italic text-crimson">Iconic.</span></h2>
+                <p class="text-muted font-light mb-8 max-w-md">
+                    Ready to elevate your visuals? Send me a message on WhatsApp with your project details to get started.
+                </p>
+                <a href="https://wa.me/919699617990" target="_blank" class="inline-flex items-center gap-3 bg-transparent border border-cream text-cream px-8 py-4 text-sm uppercase tracking-[0.2em] font-semibold hover:bg-cream hover:text-charcoal transition-all duration-300">
+                    <i class="fab fa-whatsapp text-lg"></i> Message on WhatsApp
+                </a>
+            </div>
+
+            <!-- Admin Footer Image -->
+            <div class="relative group image-card overflow-hidden rounded-sm shadow-xl justify-self-center md:justify-self-end w-full max-w-md">
+                <img src="image_10.png" alt="Admin on Bike" class="w-full h-auto object-cover transition-transform duration-700 grayscale hover:grayscale-0">
+                <div class="absolute top-4 right-4 dji-badge px-3 py-2 flex items-center gap-2 rounded-sm text-[10px] font-outfit uppercase tracking-widest text-cream z-20">
+                    <i class="fas fa-film text-crimson"></i> Creator Behind The Lens
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Copyright & Logo Area -->
+        <div class="max-w-7xl mx-auto border-t border-white/10 pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+            <a href="#" class="w-32 opacity-80 hover:opacity-100 transition-opacity">
+                <img src="image.png" alt="Afftertake Logo" class="w-full h-auto">
+            </a>
+            
+            <div class="text-center md:text-right">
+                <p class="text-cream text-sm tracking-widest uppercase mb-1">Afftertake Studio</p>
+                <p class="text-muted text-xs font-light">Based in Jalgaon, Maharashtra</p>
+            </div>
+            
+            <div class="flex gap-6 text-cream/70">
+                <a href="https://www.instagram.com/afftertake" target="_blank" class="hover:text-crimson transition-colors text-xl"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/919699617990" target="_blank" class="hover:text-crimson transition-colors text-xl"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="text-center mt-12 text-[10px] text-white/30 uppercase tracking-widest">
+            &copy; 2026 Afftertake. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
